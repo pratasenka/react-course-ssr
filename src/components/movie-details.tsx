@@ -22,7 +22,9 @@ export async function MovieDetails(props: any): Promise<React.ReactElement> {
                 <div className={`${styles['wrapper']} ${styles['movie-details']}`}>
                     <div className={styles['movie-details-company-name']}>
                         <span><span className={styles['movie-details-company-name-bold']}>netflix</span>roulette</span>
-                        <Link href='/'>
+                        <Link
+                            href={{ pathname: `/`, query: props.searchParams }} style={{ textDecoration: 'none' }}
+                        >
                             <button
                                 className={styles['movie-details-search-movie-button']}
                             // onClick={() => router.push('/')}

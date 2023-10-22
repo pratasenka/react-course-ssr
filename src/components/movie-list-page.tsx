@@ -30,6 +30,7 @@ export default async function MovieListPage(
                 {
                     props.movieId ?
                         <MovieDetails
+                            searchParams={props.searchParams}
                             movieId={props.movieId}
                         /> :
                         <HeaderSearch
@@ -41,6 +42,7 @@ export default async function MovieListPage(
 
             <div className="App-content">
                 <MoviesList
+                    searchParams={props.searchParams}
                     movies={movies}
                     genres={genres}
                     activeGenres={props.searchParams['genre']?.split(',') || []}

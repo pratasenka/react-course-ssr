@@ -2,6 +2,7 @@ import { MovieData } from "@/types";
 import SelectGenre from "./select-genre";
 import styles from '../styles/movies-list.module.css';
 import MovieItem from "./movie-item";
+import Link from "next/link";
 
 export default function MoviesList(props: any) {
     return <>
@@ -15,14 +16,21 @@ export default function MoviesList(props: any) {
         <div className={styles["container"]}>
             {
                 props.movies?.map((movie: MovieData) => {
-                    return <MovieItem
-                        key={movie.id}
-                        id={movie.id}
-                        movie={movie}
-                    // edit={props.edit}
-                    // delete={props.delete}
-                    // setMovieDetails={props.setMovieDetails}
-                    />
+                    return <>
+                        <Link
+                            key={movie.id}
+                            href={{ pathname: `/${movie.id}`, query: props.searchParams }} style={{ textDecoration: 'none' }}
+                        >
+                            <MovieItem
+                                key={movie.id}
+                                id={movie.id}
+                                movie={movie}
+                            // edit={props.edit}
+                            // delete={props.delete}
+                            // setMovieDetails={props.setMovieDetails}
+                            />
+                        </Link>
+                    </>
                 })
             }
         </div>
