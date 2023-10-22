@@ -1,27 +1,92 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.App {
+  text-align: center;
+  height: 100vh;
+  background-color: #232323;
+  overflow: auto;
+}
+
+.App-header {
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-content {
+  display: inline-block;
+  width: 80%;
+  margin-top: 1vh;
+  background-color: #232323;
+}
+
+.heightX {
+  height: 20vh;
+}
+
+.wrapper {
+  padding-right: 20px;
+}
+
+.row {
+  clear: both;
+}
+
+
+.col {
+  float: left;
+  width: 10%;
+}
+
+.col.span0 {
+  width: auto;
+}
+
+
+.col.space {
+  width: 5%;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+
+.col.span2 {
+  width: 20%;
+}
+
+.col.span3 {
+  width: 30%;
+}
+
+.col.span4 {
+  width: 40%;
+}
+
+.col.span5 {
+  width: 50%;
+}
+
+.col.span6 {
+  width: 60%;
+}
+
+.col.span7 {
+  width: 70%;
+}
+
+.col.span8 {
+  width: 80%;
+}
+
+.col.span9 {
+  width: 90%;
+}
+
+.col.span10 {
+  width: 100%;
 }

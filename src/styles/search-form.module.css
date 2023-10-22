@@ -1,0 +1,42 @@
+.searchForm {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.searchFormButton {
+    height: 50px;
+    width: 20%;
+    margin: 0 10px;
+
+    border-radius: 4px;
+    border: none;
+
+    background-color: #f65261;
+    color: white;
+    font-size: 15px;
+}
+
+.searchFormInput {
+    margin-right: 10px;
+    padding: 0 15px;
+
+    width: 70%;
+    height: 50px;
+
+    border: none;
+    border-radius: 4px;
+
+    color: #b4b4b4;
+    background-color: #424242;
+    opacity: 80%;
+}
+
+.searchFormInput::placeholder {
+    opacity: 70%;
+    color: #b4b4b4
+}
+
+.searchFormInput:focus {
+    outline: none;
+}
