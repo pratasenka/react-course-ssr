@@ -1,13 +1,12 @@
 'use client'
 
+import Link from "next/link";
+
 import { apiRequest } from "@/api-requests";
 import { MovieData } from "@/types";
 import styles from '../styles/movie-details.module.css';
-import { useRouter } from "next/navigation";
-import Link from "next/link";
 
 export async function MovieDetails(props: any): Promise<React.ReactElement> {
-    const router = useRouter();
     const movie: MovieData | null = await apiRequest.findMovieById(props.movieId);
 
     const capitalize = (word: string): string => {
